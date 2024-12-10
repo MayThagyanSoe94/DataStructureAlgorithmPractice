@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.mtgs.dsa.practice","c":"DataStructureAndAlgorithmPracticeProject","l":"DataStructureAndAlgorithmPracticeProject()","u":"%3Cinit%3E()"},{"p":"com.mtgs.dsa.practice","c":"DataStructureAndAlgorithmPracticeProject","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
