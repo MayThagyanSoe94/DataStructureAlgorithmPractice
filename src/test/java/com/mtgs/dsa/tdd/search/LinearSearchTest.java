@@ -4,13 +4,13 @@ import static junit.framework.TestCase.assertEquals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import com.mtgs.dsa.LinearSearch;
+import com.mtgs.dsa.tdd.LinearSearch;
 
 /**
  *
  * @author maythagyansoe
  */
-public class LinearTestSearch {
+public class LinearSearchTest {
 
     LinearSearch lsAlgo = new LinearSearch();
     int[] input = {1, 2, 3, 4, 5, -1};

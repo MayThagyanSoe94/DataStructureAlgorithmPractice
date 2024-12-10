@@ -1,4 +1,4 @@
-package com.mtgs.dsa;
+package com.mtgs.dsa.tdd;
 
 /**
  *
