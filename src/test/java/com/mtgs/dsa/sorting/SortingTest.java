@@ -5,47 +5,49 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import com.mtgs.dsa.sort.BubbleSort;
+import com.mtgs.dsa.sort.InsertionSort;
 import com.mtgs.dsa.sort.SelectionSort;
 import com.mtgs.dsa.util.Util;
 
 public class SortingTest {
 	Util util = new Util();
-	//SortingAlgorithm soltingAlgorithm = new BubbleSort();
-	SortingAlgorithm soltingAlgorithm = new SelectionSort();
+	// SortingAlgorithm sortingAlgorithm = new BubbleSort();
+	// SortingAlgorithm sortingAlgorithm = new SelectionSort();
+	SortingAlgorithm sortingAlgorithm = new InsertionSort();
 
 	@Test
 	public void testEmptySort() {
 		int[] arr = {};
-		soltingAlgorithm.sort(arr);
+		sortingAlgorithm.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 
 	@Test
 	public void testSingleSort() {
 		int[] arr = { 3 };
-		soltingAlgorithm.sort(arr);
+		sortingAlgorithm.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 
 	@Test
 	public void testTwoSort() {
 		int[] arr = { 3, 2 };
-		soltingAlgorithm.sort(arr);
+		sortingAlgorithm.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 
 	@Test
 	public void testBubbleSort() {
 		int[] arr = { 3, 1, 3 };
-		soltingAlgorithm.sort(arr);
+		sortingAlgorithm.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 
 	@Test
 	public void testRandomSort() {
-		int[] arr = util.createRandomArray(20);
+		int[] arr = util.createRandomArray(10);
 		System.out.println("Input  >>> " + util.arrayToString(arr));
-		soltingAlgorithm.sort(arr);
+		sortingAlgorithm.sort(arr);
 		System.out.println("Sorted >>> " + util.arrayToString(arr));
 		assertTrue(util.isArraySorted(arr));
 	}
