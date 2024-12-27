@@ -2,26 +2,42 @@ package com.mtgs.dsa.datastructure;
 
 public class CircularQueue extends Queue {
 
+	int size = 0 ;
 	public CircularQueue() {
 		super();
 	}
 
 	public void enqueue(int input) {
-		this.tail = this.tail % this.items.length;
-		this.items[this.tail++] = input;
-		System.out.println("tail enqueue >>> "+ tail);
+		if(isFull()){
+			throw new RuntimeException("Queue is Full");
+		}else {
+			this.tail = this.tail % this.items.length;
+			this.items[this.tail++] = input;
+			this.size++;
+		}
 	}
 
     public int dequeue() {
-		this.head = this.head % this.items.length;
-		int index = this.head++;
-		System.out.println("head dequeue >>> "+ index);
-		return this.items[index];
-	}
-    
+		if(isEmpty()){
+			throw new RuntimeException("Queue is Empty");
+		}
+		else {
+			this.head = this.head % this.items.length;
+			this.size --;
+			return this.items[this.head++];
+		}
+    }
+
 	public int size() {
-		System.out.println("size tail >>> "+ this.tail);
-		System.out.println("size head >>> "+ this.head);
-		return this.tail - this.head;
+		return size;
 	}
+
+	private boolean isEmpty() {
+		return this.size == 0;
+	}
+
+	private boolean isFull(){
+		return this.size == this.items.length;
+	}
+
 }
